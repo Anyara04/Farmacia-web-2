@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farmacia Alameda · Medicamentos explicados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#">Farmacia Alameda</a>
+  <nav aria-label="Principal"><a href="#catalogo">Catálogo</a><a href="#nosotros">Sobre nosotros</a><a href="#contacto">Contacto</a><button class="cartbtn" id="cartbtn">Mi pedido<span id="cnt">0</span></button></nav>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <h1>Antes de comprarlo, entiende para qué sirve.</h1>
+    <div class="search">
+      <label for="q" class="hint" style="margin:0 0 8px;display:block">Busca por nombre o por lo que sientes</label>
+      <input id="q" type="search" placeholder="Ej. dolor de cabeza, ibuprofeno, alergia" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sug">
+      <ul id="sug" role="listbox" hidden></ul>
+    </div>
+    <p class="hint">Cada medicamento tiene su ficha con usos, cómo tomarlo y advertencias.</p>
+  </div>
+  <aside class="today" aria-label="Datos de la farmacia">
+    <p><strong>Horario</strong><br>Lunes a sábado, de 8:00 a. m. a 8:00 p. m.</p>
+    <p>Llámanos al <a href="tel:+18095508839">809-550-8839</a><br>o escríbenos por WhatsApp.</p>
+    <p>San Carlos, Calle N/9, La Romana</p>
+  </aside>
+</div>
+
+<section id="catalogo" aria-labelledby="t-cat">
+  <h2 id="t-cat">Catálogo</h2>
+  <div class="filters" id="filters" role="group" aria-label="Filtros"></div>
+  <div class="list" id="list" aria-live="polite"></div>
+</section>
+
+<section id="nosotros" aria-labelledby="t-nos">
+  <div class="cols">
+    <div><h2 id="t-nos">Sobre nosotros</h2></div>
+    <div>
+      <p>Somos una farmacia de barrio con farmacéuticos titulados en mostrador. Si dudas entre dos productos, pregúntanos: preferimos explicarte que venderte de más.</p>
+      <p>Las fichas de este sitio resumen los prospectos oficiales en lenguaje cotidiano. No reemplazan la consulta con tu médico o farmacéutico.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" aria-labelledby="t-con">
+  <div class="cols">
+    <div><h2 id="t-con">Contacto y ubicación</h2></div>
+    <div>
+      <p><strong>Dirección:</strong> San Carlos, Calle N/9, La Romana<br><strong>Teléfono:</strong> <a href="tel:+18095508839">809-550-8839</a><br><strong>Horario:</strong> lunes a sábado, de 8:00 a. m. a 8:00 p. m.</p>
+      <p>Para medicamentos con receta, trae la receta original o envíanos una foto legible por WhatsApp.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+</div>
+
+<dialog id="dlg" aria-labelledby="d-name"><div class="sheet" id="sheet"></div></dialog>
+<dialog id="cdlg" aria-labelledby="c-title"><div class="sheet" id="cart"></div></dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
